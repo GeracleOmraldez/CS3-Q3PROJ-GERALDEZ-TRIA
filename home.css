@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+header {
+    background-color: #e6e6e6;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li {
+    padding: 0 20px;
+    position: relative;
+}
+
+nav ul li:not(:last-child)::after {
+    content: "|";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    height: 100%;
+    color: #333333;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.home-icon {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+.top-artists, .top-genres {
+    padding: 20px;
+    text-align: center;
+}
+
+.logo-section {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.logo {
+    max-width: 400px; /* Increased size for the logo */
+    display: block;
+    margin: 0 auto;
+    height: auto; /* Keeps aspect ratio */
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #b00000;
+}
+
+.listen-now {
+    background-color: #b00000;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.listen-now:hover {
+    background-color: #8a0000;
+}
+
+.gabgab {
+    float: left;
+    margin-top: 50px;
+}
+
+.oracle {
+    float: right;
+    margin-top: 10px;
+}
+
+.OCSlogo {
+    margin-top: 350px;
+    position: relative;
+    left: -200px;
+}
