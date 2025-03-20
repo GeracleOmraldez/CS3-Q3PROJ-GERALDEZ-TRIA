@@ -18,3 +18,4 @@ document.querySelector(".playlistButton").addEventListener("click", function() {
 
   playlistDiv.appendChild(img);
 });
+

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="Clubs, PSHS-MC, Application" />
+  <meta name="description" content="A PSHS-MC Club/Organization Application Form" />
+  <meta name="author" content="Joachim Gabrio G. Tria"/>
+  <meta name="revised" content="03/09/2025" />
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/e6c59fd2-dcf4-4f58-b816-fd9620c865ba/TRIA_Favicon.ico?v=1741514209445">
+  
+</head>   
+  <body>
+    <div class = "form">
+      <form method = "post" action = "submit" onsubmit= "return confirmationsubmission()" onreset= "return confirmationreset()">
+        
+    <!--This is the code for Fieldset 1-->
+    <fieldset>
+      <legend>Your Contact and Academic Information</legend>
+      <label>
+        Student ID (Input as Numeric Value):
+        <input type= "number" name= "StudentID" required onblur="empty(event)">
+      </label>
+      <br>
+      <label>
+        Full Name:
+        <input type= "text" name= "FullName" required onblur="empty(event)">
+      </label>
+      <br>
+      <label>
+        Birthday:
+        <input type= "date" name= "Birthday" required onblur="empty(event)">
+      </label>
+      <br>
+      <label>
+        Email Address:
+        <input type= "email" name= "Email" required onblur="empty(event)">
+      </label>
+      <br>
+    </fieldset>
+        
+    <!--This is the code for Fieldset 2-->
+    <fieldset>
+      <legend>Your Contact and Academic Information</legend>
+      <label>
+        Mobile Phone Number:
+        <input type= "text" name= "MobilePhone" required onblur="empty(event)">
+        <br>
+        Grade Level:
+        <select name= "grade" required>
+          <option value="" disabled selected> Select Your Grade Level</option>
+          <option value="7"> I am in Grade 7</option>
+          <option value="8"> I am in Grade 8</option>
+          <option value="9"> I am in Grade 9</option>
+          <option value="10"> I am in Grade 10</option>
+          <option value="11"> I am in Grade 11</option>
+          <option value="12"> I am in Grade 12</option>
+        </select>
+      </label>
+      <br>
+      <label>
+        Intern/Extern:
+        <input type= "radio" name= "InternOrExtern" value= "Intern" required onblur="empty(event)"> Intern
+        <input type= "radio" name= "InternOrExtern" value= "Extern" required onblur="empty(event)"> Extern
+      </label>
+      <br>
+    </fieldset>
+        
+    <!--This is the code for Fieldset 3-->
+    <fieldset>
+      <legend>Your Club/Organization Application Formation</legend>
+      <label>
+        My Preferred Club/Organization
+        <select name= "preferredcluborganization" required>
+          <option value="" disabled selected> Select Your Preferred Club/Organization</option>
+          <option value="Volleyball"> Kislap</option> <!-- Sir, I'm very biased, this is the best club -->
+          <option value="Ultimate Frisbee"> Alianti</option>
+          <option value="Badminton"> Volant</option>
+          <option value="Biomedicine Society"> Karyo</option>
+          <option value="English Theatre"> Sightlines</option>
+        </select>
+      </label>
+      <br>
+      <label>
+        Why Do You Want To Join?
+      <br>
+        <textarea name="Reason" rows="5"  required onblur="empty(event)"></textarea>
+      </label>
+    </fieldset>
+        
+    <!--This is the code for the Buttons-->
+    <div id= "ButtonHolder">
+      <button type= "submit" id= "submit" onclick= "return confirmationsubmission()">Submit!</button>
+      <button type= "reset" id= "reset" onclick= "return confirmationreset()">Reset!</button>
+    </div>
+         
+      </form>  
+    </div>  
+  </body> 
+</html>
