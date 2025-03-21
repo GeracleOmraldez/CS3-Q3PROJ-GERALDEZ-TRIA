@@ -1,82 +1,81 @@
 html{
-    background-color: #4E9FE5;
-    margin: auto;
-    width: 80vh;
-    height: 80vh;
-  }
-  
-  .form{
-    background-color: #8a2be2;
-    color: #000000;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    width: 540px;
-    padding: 5px;
-    font-size: 115%;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 10px;
-  }
-  
-  #results{
-    background-color: #8a2be2;
-    color: #000000;
-    margin: auto;
-    width: 500px;
-    padding: 10px;
-    font-size: 130%;
-    box-shadow: 5px 5px 5px black;
-    border-radius: 20px;
-  }
-  
-  #space{
-    width: 20px;
-  }
-  
-  h1{
-    text-align: center;
-  }
-  
-  input, select, ratio {
-    margin-bottom: 15px;
-  }
-  
-  legend {
-    margin-bottom: 5px
-  }
-  
-  fieldset{
-    margin-bottom: 10px;
-    border-radius: 10px;
-    border: dotted black;
-  }
-  
-  textarea{
-    width: 500px;
-    height: 200px;
-  }
-  
-  #submit{
-    margin-right: 20px;
-  }
-  
-  button{
-    padding: 10px;
-    width: 20%;
-    font-size: 100%;
-    background-color: black;
-    color: white;
-    border-radius: 5px;
-  }
-  
-  button:hover{
-    background-color: white;
-    color: black;
-  }
-  
-  #ButtonHolder{
-    display: flex;
-    justify-content: center;
-  }
-  
-  
+  background-color: #FF8A8A;
+  margin: auto;
+  width: 80vh;
+  height: 80vh;
+}
+
+.form{
+  background-color: #ffffff;
+  color: #DB0F27;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 540px;
+  padding: 5px;
+  font-size: 115%;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 10px;
+}
+
+#results{
+  background-color: #8a2be2;
+  color: #000000;
+  margin: auto;
+  width: 500px;
+  padding: 10px;
+  font-size: 130%;
+  box-shadow: 5px 5px 5px black;
+  border-radius: 20px;
+}
+
+#space{
+  width: 20px;
+}
+
+h1{
+  text-align: center;
+}
+
+input, select, ratio {
+  margin-bottom: 15px;
+}
+
+legend {
+  margin-bottom: 5px
+}
+
+fieldset{
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: dotted black;
+}
+
+textarea{
+  width: 500px;
+  height: 200px;
+}
+
+#submit{
+  margin-right: 20px;
+}
+
+button{
+  padding: 10px;
+  width: 20%;
+  font-size: 100%;
+  background-color: #800000;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover{
+  background-color: white;
+  color: #800000;
+}
+
+#ButtonHolder{
+  display: flex;
+  justify-content: center;
+}
+

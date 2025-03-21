@@ -1,30 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curated Soundtrack</title>
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curated Soundtrack</title>
+  <link rel="stylesheet" href="home.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>LEADERBOARDS</li>
-              <li><a href="myPlaylist.html">MY PLAYLIST</a></li>
-                <li>MY COMPONENTS</li>
-                <li><a href="statistics.html"></a>MY STATISTICS</li>
-            </ul>
-            <div class="home-icon"></div>
-        </nav>
-    </header>
-    <main>
-        <div class="logo-section">
-            <img class="logo" src="https://cdn.glitch.global/d7d65b15-a0f2-4384-be3b-c0b759c11c3d/ocs.png?v=1734946623010">
-            <button class="listen-now" onclick="listenNow()">Listen Now</button>
-            <button class="creators" onclick="creators()">Meet the Creators</button>
-        </div>
-    </main>
-    <script src="script.js"></script>
+  <header>
+    <nav>
+      <ul>
+        <li>LEADERBOARDS</li>
+        <li><a href="myPlaylist.html">MY PLAYLIST</a></li>
+        <li>MY COMPONENTS</li>
+        <li><a href="statistics.html">MY STATISTICS</a></li>
+      </ul>
+      <div class="home-icon"></div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="logo-section">
+      <img class="logo" src="https://cdn.glitch.global/d7d65b15-a0f2-4384-be3b-c0b759c11c3d/ocs.png?v=1734946623010" alt="Curated Soundtrack Logo">
+      <h2 id="welcome-message">Welcome to Our Curated Soundtrack!</h2>
+
+      <button class="listen-now" id="listenNowBtn">Listen Now</button>
+      <button class="creators" id="creatorsBtn">Meet the Creators</button>
+    </div>
+  </main>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const username = localStorage.getItem('loggedInUser')
+      const welcomeMessage = document.getElementById('welcome-message')
+      const listenNowBtn = document.getElementById('listenNowBtn')
+      const creatorsBtn = document.getElementById('creatorsBtn')
+
+      if (username) {
+        welcomeMessage.textContent = `Welcome, ${username}!`
+        listenNowBtn.style.display = 'none'
+        creatorsBtn.style.display = 'none'
+
+        const logoutBtn = document.createElement('button')
+        logoutBtn.textContent = 'Logout'
+        logoutBtn.className = 'logout'
+        logoutBtn.addEventListener('click', () => {
+          localStorage.removeItem('loggedInUser')
+          location.reload()
+        })
+
+        document.querySelector('.logo-section').appendChild(logoutBtn)
+      } else {
+        welcomeMessage.textContent = 'Welcome to Our Curated Soundtrack'
+        listenNowBtn.addEventListener('click', () => {
+          window.location.href = 'form.html'
+        })
+      }
+
+      creatorsBtn.addEventListener('click', () => {
+        window.location.href = 'creators.html'
+      })
+    })
+  </script>
 </body>
 </html>
