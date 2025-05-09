@@ -10,7 +10,7 @@ function listenNow() {
 document.querySelector(".playlistButton").addEventListener("click", function() {
   let playlistDiv = document.getElementById("playlist");
 
-  playlistDiv.innerHTML = ""; // Clear previous content
+  playlistDiv.innerHTML = ""; 
   let img = document.createElement("img");
   img.src = "images/myPlaylist.png";
   img.alt = "Playlist Image";
