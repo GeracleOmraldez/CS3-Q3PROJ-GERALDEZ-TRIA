@@ -19,48 +19,50 @@
     </nav>
   </header>
 
+
   <main>
     <div class="logo-section">
       <img class="logo" src="https://cdn.glitch.global/d7d65b15-a0f2-4384-be3b-c0b759c11c3d/ocs.png?v=1734946623010" alt="Curated Soundtrack Logo">
       <h2 id="welcome-message">Welcome to Our Curated Soundtrack!</h2>
+
 
       <button class="listen-now" id="listenNowBtn">Listen Now</button>
       <button class="creators" id="creatorsBtn">Meet the Creators</button>
     </div>
   </main>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      const username = localStorage.getItem('loggedInUser')
-      const welcomeMessage = document.getElementById('welcome-message')
-      const listenNowBtn = document.getElementById('listenNowBtn')
-      const creatorsBtn = document.getElementById('creatorsBtn')
 
-      if (username) {
-        welcomeMessage.textContent = `Welcome, ${username}!`
-        listenNowBtn.style.display = 'none'
-        creatorsBtn.style.display = 'none'
+ <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const username = localStorage.getItem('loggedInUser');
+    const welcomeMessage = document.getElementById('welcome-message');
+    const listenNowBtn = document.getElementById('listenNowBtn');
+    const creatorsBtn = document.getElementById('creatorsBtn');
 
-        const logoutBtn = document.createElement('button')
-        logoutBtn.textContent = 'Logout'
-        logoutBtn.className = 'logout'
-        logoutBtn.addEventListener('click', () => {
-          localStorage.removeItem('loggedInUser')
-          location.reload()
-        })
+    if (username) {
+      welcomeMessage.textContent = `Welcome, ${username}!`;
+      listenNowBtn.style.display = 'none';
+      creatorsBtn.style.display = 'none';
 
-        document.querySelector('.logo-section').appendChild(logoutBtn)
-      } else {
-        welcomeMessage.textContent = 'Welcome to Our Curated Soundtrack'
-        listenNowBtn.addEventListener('click', () => {
-          window.location.href = 'form'
-        })
-      }
+      const logoutBtn = document.createElement('button');
+      logoutBtn.textContent = 'Logout';
+      logoutBtn.className = 'logout';
+      logoutBtn.addEventListener('click', () => {
+        localStorage.removeItem('loggedInUser');
+        location.reload();
+      });
+
+      document.querySelector('.logo-section').appendChild(logoutBtn);
+    } else {
+      welcomeMessage.textContent = 'Welcome to Our Curated Soundtrack';
+
+      listenNowBtn.addEventListener('click', () => {
+        window.location.href = '/form';         // ✅ FIXED
+      });
 
       creatorsBtn.addEventListener('click', () => {
-        window.location.href = 'creators'
-      })
-    })
-  </script>
-</body>
-</html>
+        window.location.href = '/creators';     // ✅ FIXED
+      });
+    }
+  });
+</script>

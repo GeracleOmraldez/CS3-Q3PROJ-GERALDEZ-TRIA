@@ -3,58 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="keywords" content="Clubs, PSHS-MC, Application" />
-  <meta name="description" content="A PSHS-MC Club/Organization Application Form" />
-  <meta name="author" content="Joachim Gabrio G. Tria" />
-  <meta name="revised" content="03/09/2025" />
-  <link rel="stylesheet" href="form.css" />
-  <link rel="icon" href="https://cdn.glitch.global/e6c59fd2-dcf4-4f58-b816-fd9620c865ba/TRIA_Favicon.ico?v=1741514209445" />
+  <title>Create Account</title>
+  <link rel="stylesheet" href="/form.css" />
 </head>
 <body>
-  <div class="form">
-    <form method="POST" action="/submit" onsubmit="return handleFormSubmit()" onreset="return confirmationreset()">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label>
-          Input Full Name:
-          <input type="text" name="fullname" required onblur="empty(event)">
-        </label><br>
-        <label>
-          Input Desired Username:
-          <input type="text" name="username" required onblur="empty(event)">
-        </label><br>
-        <label>
-          Input Age:
-          <input type="number" name="userage" required onblur="empty(event)">
-        </label><br>
-        <label>
-          Input Email Address:
-          <input type="email" name="email" required onblur="empty(event)">
-        </label><br>
-      </fieldset>
+  <h1>Create Your Account</h1>
 
-      <fieldset>
-        <legend>Musical Information</legend>
-        <label>
-          Top 5 Favorite Music Genres:
-          <input type="text" name="musicgenre" required onblur="empty(event)">
-        </label><br>
-        <label>
-          Top 5 Favorite Music Artists:
-          <input type="text" name="musicartist" required onblur="empty(event)">
-        </label><br>
-        <label>
-          Why Did You Choose Our Curated Soundtrack?<br>
-          <textarea name="whychoose" rows="3" required onblur="empty(event)"></textarea>
-        </label>
-      </fieldset>
+  <form method="POST" action="/create-account">
+    <fieldset>
+      <legend>Personal Information</legend>
 
-      <div id="ButtonHolder">
-        <button type="submit" id="submit">Submit!</button>
-        <button type="reset" id="reset">Reset!</button>
-      </div>
-    </form>
-  </div>
-  <script src="form.js"></script>
+      <label>Full Name:
+        <input type="text" name="fullname" required>
+      </label><br>
+
+      <label>Username:
+        <input type="text" name="username" required>
+      </label><br>
+
+      <label>Birthday:
+        <input type="date" name="birthday" required>
+      </label><br>
+
+      <label>Email:
+        <input type="email" name="email" required>
+      </label><br>
+
+      <label>Age:
+        <input type="number" name="age" required>
+      </label><br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Music Preferences</legend>
+
+      <label>Favorite Music Genre:
+        <input type="text" name="musicgenre" required>
+      </label><br>
+
+      <label>Favorite Music Artists:
+        <input type="text" name="musicartist" required>
+      </label><br>
+    </fieldset>
+
+    <button type="submit">Submit</button>
+  </form>
 </body>
 </html>

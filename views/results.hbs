@@ -3,22 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Submission Result</title>
-  <link rel="stylesheet" href="home.css" />
+  <title>Form Submitted</title>
+  <link rel="stylesheet" href="/form.css" />
 </head>
 <body>
-  <header>
-    <h1>Form Submitted!</h1>
-  </header>
+  <h1>Form Submitted!</h1>
 
-  <main>
-    <p><strong>Name:</strong> {{fullname}}</p>
-    <p><strong>Username:</strong> {{username}}</p>
-    <p><strong>Age:</strong> {{userage}}</p>
-    <p><strong>Email:</strong> {{email}}</p>
-    <p><strong>Top Genres:</strong> {{musicgenre}}</p>
-    <p><strong>Top Artists:</strong> {{musicartist}}</p>
-    <p><strong>Why Choose Us:</strong> {{whychoose}}</p>
-  </main>
+  <p><strong>Name:</strong> {{fullName}}</p>
+  <p><strong>Username:</strong> {{username}}</p>
+  <p><strong>Age:</strong> {{age}}</p>
+  <p><strong>Email:</strong> {{email}}</p>
+  <p><strong>Top Genres:</strong> {{musicGenre}}</p>
+  <p><strong>Top Artists:</strong> {{musicArtists}}</p>
+  <p><strong>Why Choose Us:</strong> {{whychoose}}</p>
+
+  <form action="/" method="get">
+    <button type="submit">Go to Homepage</button>
+  </form>
+
+  <form action="/delete-account" method="post">
+    <input type="hidden" name="username" value="{{username}}" />
+    <button type="submit" style="background-color: red; color: white;">Delete My Account</button>
+  </form>
 </body>
 </html>
